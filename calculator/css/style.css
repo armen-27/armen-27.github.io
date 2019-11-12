@@ -1,0 +1,134 @@
+
+
+body{
+    background-size: 100%;
+    background-image: url("../image/image.png");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: normal 25px Arial, sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+#calculator {
+    transition: width 0.7s;
+    width: 259px;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+    position: relative;
+    background: #d3545d00;;
+    border-radius: 11px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.top button.reset {
+    position: absolute;
+    z-index: 6;
+
+}
+
+
+.top #screen {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 10px 10px 80px;
+    background: #d3545d;;
+    font-size: 30px;
+    color: white;
+    text-shadow: -3px 2px 3px rgba(0, 0, 0, 0.72);
+    text-align: right;
+}
+
+.keys, .top {
+    overflow: hidden;
+}
+
+
+input, button{
+    border: none;
+    outline: none;
+}
+.keys button, .top button.reset {
+    float: left;
+    position: relative;
+    top: 0;
+    border: none;
+    width: 66px;
+    height: 56px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    box-shadow: -1px 5px 4px 0px rgba(0, 0, 0, 0.2);
+    margin: 0 7px 11px 0;
+    color: #ccc;
+    line-height: 56px;
+    text-align: center;
+    user-select: none;
+    transition: all 0.5s ease;
+}
+
+
+.keys button.operator {
+    transition: opacity 0.7s;!important;
+    opacity: 0;
+    display: none;
+    background:#d3545d;
+    margin-right: 0;
+}
+
+
+
+.keys button.eval {
+    margin-right: 7px;
+    background: #d3545d;
+    color: #ffffff;
+}
+
+.top button.reset {
+
+    background: #00000000;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.71);
+    width: 55px;
+    left: 0px;
+}
+
+
+.keys button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.eval:hover {
+    background: #abb850;
+    color: #ffffff;
+}
+
+.top button.reset:hover {
+    border-radius: 190px;
+    background: #00000040;
+    color: white;
+}
+
+.keys button:active {
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.2);
+    top: 4px;
+}
+
+.keys button.eval:active {
+    box-shadow: 0px 0px #717a33;
+    top: 4px;
+}
+
+.top button.reset:active {
+    top: 4px;
+    box-shadow: 0px 0px #d3545d;
+}
