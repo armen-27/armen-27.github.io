@@ -6,32 +6,46 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div style="display: flex">
+<div id="calculator" >
 
-<div id="calculator">
     <div class="top">
-        <button onclick="reset()" class="reset">C</button>
-        <input id="screen" placeholder="0.0">
+        <input id="screen"  placeholder="0.0">
     </div>
+
 
     <div class="keys">
         <button onclick="input('7')">7</button>
         <button onclick="input('8')">8</button>
         <button onclick="input('9')">9</button>
-        <button onclick="input('+')" class="operator">+</button>
+        <button onclick="reset()" class="operator">C</button>
+        <button onclick="backSpace()" class="operator"><</button>
+
         <button onclick="input('4')">4</button>
         <button onclick="input('5')">5</button>
         <button onclick="input('6')">6</button>
+        <button onclick="input('+')" class="operator">+</button>
         <button onclick="input('-')" class="operator">-</button>
+
+
+
         <button onclick="input('1')">1</button>
         <button onclick="input('2')">2</button>
         <button onclick="input('3')">3</button>
         <button onclick="input('/')" class="operator">/</button>
-        <button onclick="input('0')">0</button>
+        <button onclick="input('*')" class="operator">x</button>
+        <button  class="zero" onclick="input('0')">0</button>
         <button onclick="input('.')">.</button>
         <button onclick="result()" class="eval operator">=</button>
-        <button onclick="input('*')" class="operator">x</button>
     </div>
 </div>
+
+
+<div id="history">
+
+</div>
+</div>
+
 <script src="js/script.js"></script>
 </body>
 </html>
