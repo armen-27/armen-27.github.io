@@ -100,7 +100,7 @@ function error(error) {
     }
     screen.style.backgroundColor = "#9e4249"
     setTimeout(function () {
-        screen.value = endValue;
+        screen.value = "";
 
         screen.style.backgroundColor = "#00000096";
     }, 500);
