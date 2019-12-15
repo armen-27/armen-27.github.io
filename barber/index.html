@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barber</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="runFunction()">
+<div id="actionDiv">
+    <button id="changeClient">Change</button>
+    <button id="deleteClient">Delete</button>
+    <button id="closeAction">Close</button>
+
+
+</div>
+<div class="menu">
+    <a href="#"> <img src="img/logo.png" alt=""></a>
+    <hr>
+    <ul>
+        <li onclick="pageUnset('register')">Register a client</li>
+        <li onclick="pageUnset('registerToday')">Registered today</li>
+        <li onclick="pageUnset('allRegister')">All registered</li>
+    </ul>
+
+    <hr>
+    <h1 id="clock">12:12 || 12.12.12</h1>
+    <hr>
+    <div id="nextClient">
+    </div>
+
+</div>
+
+<div class="page" id="register">
+    <form name="registerForm" method="post">
+        <div class="registerInputs">
+
+            <input type="text" id="name" name="firstName" placeholder="Name" autocomplete=off>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" autocomplete=off>
+            <input type="date" id="date" name="date" oninput="checkDate(this)">
+            <input type="time" id="time" name="time" min="09:00" max="18:00" disabled>
+            <input type="button" name="button" class="registerButton" value="Register a client">
+
+        </div>
+        <div class="selectTime" id="selectTime">
+            <h1> Free hours</h1>
+            <label class="container">09:00
+                <input onclick="selectTime(this)" type="radio" value="09:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">09:30
+                <input onclick="selectTime(this)" type="radio" value="09:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">10:00
+                <input onclick="selectTime(this)" type="radio" value="10:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">10:30
+                <input onclick="selectTime(this)" type="radio" value="10:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">11:00
+                <input onclick="selectTime(this)" type="radio" value="11:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">11:30
+                <input onclick="selectTime(this)" type="radio" value="11:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">12:00
+                <input onclick="selectTime(this)" type="radio" value="12:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">12:30
+                <input onclick="selectTime(this)" type="radio" value="12:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">13:00
+                <input onclick="selectTime(this)" type="radio" value="13:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">13:30
+                <input onclick="selectTime(this)" type="radio" value="13:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">14:00
+                <input onclick="selectTime(this)" type="radio" value="14:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">14:30
+                <input onclick="selectTime(this)" type="radio" value="14:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">15:00
+                <input onclick="selectTime(this)" type="radio" value="15:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">15:30
+                <input onclick="selectTime(this)" type="radio" value="15:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">16:00
+                <input onclick="selectTime(this)" type="radio" value="16:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">16:30
+                <input onclick="selectTime(this)" type="radio" value="16:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">17:00
+                <input onclick="selectTime(this)" type="radio" value="17:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">17:30
+                <input onclick="selectTime(this)" type="radio" value="17:30" name="time">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">18:00
+                <input onclick="selectTime(this)" type="radio" value="18:00" name="time">
+                <span class="checkmark"></span>
+            </label>
+
+        </div>
+    </form>
+
+</div>
+<div class="page" id="registerToday">
+    <table id="clientListToday">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+
+    </table>
+</div>
+<div class="page" id="allRegister">
+    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for Phone Numbers..."
+           style="width: 350px">
+    <table id="clientList">
+
+
+    </table>
+</div>
+
+
+<script src="js/script.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/functional.js"></script>
+
+
+</body>
+</html>
